@@ -3,4 +3,4 @@ A multithreaded python downloader that allows multiple connections to be used to
 
 ## usage
 
-./threaded_downloader.py <url>
+`./threaded_downloader.py <url>`
