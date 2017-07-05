@@ -26,10 +26,10 @@ class DiskWriter(object):
                 break
             f.seek(item['offset'])
             f.write(item['buffer'])
-            f.flush()
             written_bytes += len(item['buffer'])
             self.print_progress(bytes_written=written_bytes, file_size=file_size)
-
+        
+        f.flush()
         f.close()
         print "\nFinished Writing {0}".format(file_name)
         print "Verifying {0}".format(file_name)
